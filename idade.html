@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade da Aurora</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎂 Idade da Aurora 🌸</h1>
+        <p>Cada dia é uma nova lembrança.</p>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="card">
+
+            <h2>❤️ Quanto tempo a Aurora está conosco?</h2>
+
+            <div id="contador">
+                Calculando...
+            </div>
+
+            <p>
+                Cada segundo da sua vida é um presente. 🌸
+            </p>
+
+        </section>
+
+        <a href="Index.html" class="botao">← Voltar ao início</a>
+
+    </main>
+
+    <footer>
+        <p>Feito com ❤️ para Aurora</p>
+    </footer>
+
+    <script>
+
+        const nascimento = new Date(2026, 6, 3, 0, 0, 0);
+
+        function atualizarContador() {
+
+            const agora = new Date();
+
+            let anos = agora.getFullYear() - nascimento.getFullYear();
+            let meses = agora.getMonth() - nascimento.getMonth();
+            let dias = agora.getDate() - nascimento.getDate();
+
+            if (dias < 0) {
+                meses--;
+                const ultimoMes = new Date(
+                    agora.getFullYear(),
+                    agora.getMonth(),
+                    0
+                );
+                dias += ultimoMes.getDate();
+            }
+
+            if (meses < 0) {
+                anos--;
+                meses += 12;
+            }
+
+            const diferenca = agora - nascimento;
+            const totalDias = Math.floor(
+                diferenca / (1000 * 60 * 60 * 24)
+            );
+
+            document.getElementById("contador").innerHTML =
+                `<strong>${anos} anos, ${meses} meses e ${dias} dias</strong>
+                <br><br>
+                ❤️ ${totalDias} dias de vida`;
+
+        }
+
+        atualizarContador();
+
+        setInterval(atualizarContador, 1000);
+
+    </script>
+
+</body>
+
+</html>

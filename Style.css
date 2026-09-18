@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7fb;
+    color: #4a3b43;
+    text-align: center;
+}
+
+header {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ffd6e7, #f8c8dc);
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #d46a9c;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #d46a9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.botao:hover {
+    background: #b94f82;
+}
+
+footer {
+    padding: 25px;
+    margin-top: 30px;
+    background: #f8d9e7;
+}
+.card img {
+    display: block !important;
+    width: 250px !important;
+    height: auto !important;
+    margin: 20px auto !important;
+}
+/* Player de música */
+
+#musicaAurora {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    z-index: 9999;
+    border-radius: 30px;
+}
+.foto-ampliada {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90vw !important;
+    max-width: 90vw !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    object-fit: contain !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    background: white;
+    border-radius: 15px;
+}
+.fechar-foto {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    font-size: 30px;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    display: none;
+}

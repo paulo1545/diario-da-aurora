@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galeria da Aurora</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+    <style>
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            width: 100% !important;
+            height: 180px !important;
+            object-fit: cover;
+            margin: 0 !important;
+            border-radius: 15px;
+        }
+
+        .legenda-galeria {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>📸 Galeria da Aurora 🌸</h1>
+        <p>Pequenos momentos, grandes lembranças.</p>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="card">
+
+            <h2>❤️ Momentos especiais</h2>
+
+            <div class="galeria">
+
+                <img src="Fotos/aurora01.png" alt="Aurora">
+
+                <img src="Fotos/fotoaurora03.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora06.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora07.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora14.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora17.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora18.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora20.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora22.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora27.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260803-WA0109.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260803-WA0110.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260803-WA0160.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260803-WA0186.jpg" alt="Aurora">
+
+                <img src="FotosMG-20260808-WA0175(1).jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260903-WA0071.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260913-WA0070.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260728-WA0040.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260728-WA0037.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260716-WA0028.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260715-WA0006.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260706-WA0003.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260403-WA0033.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20260222-WA0060.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG-20251125-WA0069.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora15.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG_20260707_130949303.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG_20260731_174623533_HDR.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG_20260705_173425127_MP.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora40.jpg" alt="Aurora">
+
+                <img src="Fotos/fotoaurora41.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG_20260628_184213137.jpg" alt="Aurora">
+
+                <img src="Fotos/IMG_20260703_030528362.jpg" alt="Aurora">
+
+            </div>
+
+            <p class="legenda-galeria">
+                Cada foto guarda um pedacinho da história da Aurora. ❤️
+            </p>
+
+        </section>
+
+        <a href="Index.html" class="botao">← Voltar ao início</a>
+
+    </main>
+
+    <footer>
+        <p>Feito com ❤️ para Aurora</p>
+    </footer>
+  <button class="fechar-foto" id="fecharFoto">×</button>
+<script>
+document.querySelectorAll("img").forEach(function(foto) {
+    foto.addEventListener("click", function() {
+        foto.classList.toggle("foto-ampliada");
+    });
+});
+  </script>
+  document.getElementById("fecharFoto").addEventListener("click", function() {
+    document.querySelectorAll(".foto-ampliada").forEach(function(foto) {
+        foto.classList.remove("foto-ampliada");
+    });
+});
+  
+</body>
+
+</html>
